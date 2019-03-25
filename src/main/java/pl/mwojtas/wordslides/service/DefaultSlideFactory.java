@@ -34,7 +34,7 @@ public class DefaultSlideFactory implements SlideFactory {
             }
         }
 
-        wordsList.sort(Comparator.comparingLong(o -> o.getWords().stream().map(Word::getValue).count()));
+        wordsList.sort(Comparator.comparingInt(o -> o.getWords().size()));
         Collections.reverse(wordsList);
 
         return wordsList;
